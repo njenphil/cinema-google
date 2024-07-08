@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="59.430939mm"
+   height="14.124473mm"
+   viewBox="0 0 59.430939 14.124473"
+   version="1.1"
+   id="svg7629"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7631"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.46769781"
+     inkscape:cx="125.08076"
+     inkscape:cy="243.74713"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs7626" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-72.113102,-84.017764)">
+    <g
+       id="g7150"
+       transform="matrix(0.36801292,0,0,0.36801292,38.946452,58.349559)">
+      <path
+         d="m 125.76259,102.64557 h -3.061 c 3.56959,-3.487061 5.80238,-8.335491 5.80238,-13.707271 0,-10.58019 -8.60999,-19.19019 -19.19019,-19.19019 -10.580183,0 -19.190179,8.61 -19.190179,19.19019 0,10.58019 8.609996,19.190181 19.190179,19.190181 h 16.44874 c 1.51536,0 2.74145,-1.22609 2.74145,-2.74145 0,-1.51537 -1.22609,-2.74146 -2.74145,-2.74146 z m -8.22437,-16.448731 c 1.51394,0 2.74146,1.22722 2.74146,2.74146 0,1.51394 -1.22752,2.74145 -2.74146,2.74145 -1.51394,0 -2.74145,-1.22751 -2.74145,-2.74145 0,-1.51424 1.22751,-2.74146 2.74145,-2.74146 z m -8.22436,-8.22437 c 1.51394,0 2.74146,1.22723 2.74146,2.74146 0,1.51395 -1.22752,2.74146 -2.74146,2.74146 -1.51394,0 -2.74146,-1.22751 -2.74146,-2.74146 0,-1.51423 1.22752,-2.74146 2.74146,-2.74146 z m 0,16.44873 c 1.51394,0 2.74146,1.22722 2.74146,2.74146 0,1.51394 -1.22752,2.74146 -2.74146,2.74146 -1.51394,0 -2.74146,-1.22752 -2.74146,-2.74146 0,-1.51424 1.22752,-2.74146 2.74146,-2.74146 z m -8.22437,-2.74145 c -1.513938,0 -2.74145,-1.22751 -2.74145,-2.74145 0,-1.51424 1.227512,-2.74146 2.74145,-2.74146 1.51394,0 2.74146,1.22722 2.74146,2.74146 0,1.51394 -1.22752,2.74145 -2.74146,2.74145 z"
+         id="path3405"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.0365527" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:5.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="M 122.25026,105.24598 H 251.61505"
+         id="path3831" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.403px;line-height:1.25;font-family:'Berlin Sans FB';-inkscape-font-specification:'Berlin Sans FB Bold';letter-spacing:1.42015px;word-spacing:0px;fill:#ffffff;stroke-width:0.710074"
+         x="131.50888"
+         y="95.606209"
+         id="text3891"><tspan
+           sodipodi:role="line"
+           id="tspan3889"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Berlin Sans FB';-inkscape-font-specification:'Berlin Sans FB Bold';fill:#ffffff;stroke-width:0.710074"
+           x="131.50888"
+           y="95.606209">CINEMA</tspan></text>
+    </g>
+  </g>
+</svg>

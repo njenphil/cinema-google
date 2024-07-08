@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from "react"
 
-import "./admin-styles.css"
+import "../../../lib/css/admin-styles.css"
 import { KeyObject } from "crypto"
 import CreateShow from "@/components/CreateShow"
 import AddCategory from "@/components/AddCategory"

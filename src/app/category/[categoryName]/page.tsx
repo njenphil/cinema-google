@@ -1,5 +1,5 @@
 import React from "react"
-import "./category-page.css"
+import "../../../../lib/css/category-page.css"
 
 import { categories } from "@/data"
 import CategoryPageShowcase from "@/components/CategoryPageShowcase"

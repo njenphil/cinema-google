@@ -7,7 +7,7 @@ import { useCinemaContext } from "../../../components/context"
 import { useRouter } from "next/navigation"
 import { TShow } from "../../../lib/types"
 
-import "./dashboard-page.css"
+import "../../../lib/css/dashboard-page.css"
 import DashboardShowcase from "../../../components/DashboardShowcase"
 import AccountShowCard from "../../../components/AccountShowCard"
 

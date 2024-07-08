@@ -1,6 +1,6 @@
 import React from "react"
 
-import "./single-show.css"
+import "../../../../../lib/css/single-show.css"
 import SingleShowShowcase from "@/components/SingleShowShowcase"
 import Trailer from "@/components/Trailer"
 import ShowDescription from "@/components/ShowDescription"

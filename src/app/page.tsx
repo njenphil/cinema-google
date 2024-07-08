@@ -11,17 +11,15 @@ import { getServerSession } from "next-auth"
 import { generateSafcomAccessToken } from "@/safcomAccessToken"
 import { tryOutFetchTransaction } from "@/lib/callSafcomFetchFunction"
 
-function Home() {
+const Home = () => {
   //await tryOutFetchTransaction({ amount: 10, phone: 254712990778, videoCode: "VID1001" })
 
   return (
     <>
-      <div>Soldier</div>
-
-      {/*<ShowcaseSlider />
+      <ShowcaseSlider />
       <Search />
       <CategoriesSlider />
-      <FAQ />*/}
+      <FAQ />
     </>
   )
 }

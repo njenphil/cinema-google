@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <>
-      <ShowcaseSlider />
+      {/*<ShowcaseSlider />*/}
       <Search />
       <CategoriesSlider />
       <FAQ />

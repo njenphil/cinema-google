@@ -4,6 +4,7 @@ import ShowcaseSlider from "../../components/ShowcaseSlider"
 import Search from "../../components/Search"
 import CategoriesSlider from "../../components/CategoriesSlider"
 import FAQ from "../../components/FAQ"
+import React from "react"
 
 import { getServerSession } from "next-auth"
 //import { authOptions } from "@/app/api/auth/[...nextauth]/route"

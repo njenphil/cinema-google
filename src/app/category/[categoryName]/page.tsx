@@ -7,7 +7,7 @@ import CategoryPageShowcase from "@/components/CategoryPageShowcase"
 import SpecialShowCard from "@/components/SpecialShowCard"
 import Pagination from "@/components/Pagination"
 
-const CategoryPage = ({ params }: { params: { categoryName: string } }) => {
+const CategoryPage = ({ params = { categoryName: "Adventure" } }: { params: { categoryName: string } }) => {
   const categoryLink = params.categoryName.replaceAll("-", " ")
 
   const categoryToArray = categoryLink.split(" ").map(category => category[0].toUpperCase() + category.substring(1))

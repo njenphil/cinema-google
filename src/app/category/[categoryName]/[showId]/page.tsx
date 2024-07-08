@@ -12,7 +12,12 @@ type TSingleShow = {
   showId: string
 }
 
-const SingleShowPage = async ({ params }: { params: TSingleShow }) => {
+const defaultParams = {
+  categoryName: "adventure",
+  showId: "teenage_fantasy"
+}
+
+const SingleShowPage = async ({ params = defaultParams }: { params: TSingleShow }) => {
   const showId = params?.showId
 
   const theShow = await fetch(`${process.env.HOME_URL}api/fetch-shows-url`, {

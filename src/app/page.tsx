@@ -16,10 +16,12 @@ function Home() {
 
   return (
     <>
-      {/*<ShowcaseSlider />*/}
+      <div>Soldier</div>
+
+      {/*<ShowcaseSlider />
       <Search />
       <CategoriesSlider />
-      <FAQ />
+      <FAQ />*/}
     </>
   )
 }

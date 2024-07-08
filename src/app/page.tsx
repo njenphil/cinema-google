@@ -10,7 +10,7 @@ import { getServerSession } from "next-auth"
 import { generateSafcomAccessToken } from "@/safcomAccessToken"
 import { tryOutFetchTransaction } from "@/lib/callSafcomFetchFunction"
 
-export default function Home() {
+function Home() {
   //await tryOutFetchTransaction({ amount: 10, phone: 254712990778, videoCode: "VID1001" })
 
   return (
@@ -22,3 +22,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home

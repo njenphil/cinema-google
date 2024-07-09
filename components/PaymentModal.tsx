@@ -35,6 +35,7 @@ const PaymentModal = ({ props }: { props: TestProps }) => {
   }
 
   useEffect(() => {
+    console.log(socket)
     socket.on("eventId", response => {
       const simulatePayment = async () => {
         let newPurchaseData = await fetch("/api/purchase-create", {

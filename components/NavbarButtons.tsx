@@ -39,7 +39,7 @@ const NavbarButtons = () => {
             </div>
           </div>
           <div className="login-btn" ref={logoutButtonRef}>
-            <button onClick={() => signOut()} style={{ marginRight: "0", marginLeft: "0.5rem", border: "thin solid #e50914", backgroundColor: "#e50914" }}>
+            <button onClick={() => signOut()} style={{ marginRight: "0", marginLeft: "0.5rem", border: "thin solid #07BBFF", backgroundColor: "#07BBFF" }}>
               Sign Out
             </button>
           </div>

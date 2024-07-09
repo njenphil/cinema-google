@@ -28,14 +28,13 @@ const PaymentModal = ({ props }: { props: TestProps }) => {
 
   const router = useRouter()
 
-  const [socket, setSocket] = useState(io("https://websocket-production-b0ae.up.railway.app"))
+  const [socket, setSocket] = useState(io("http://localhost:5000"))
 
   const joinRoom = (id: string) => {
     socket.emit("join_room", id)
   }
 
   useEffect(() => {
-    console.log(socket)
     socket.on("eventId", response => {
       const simulatePayment = async () => {
         let newPurchaseData = await fetch("/api/purchase-create", {

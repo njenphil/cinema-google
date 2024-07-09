@@ -28,13 +28,13 @@ const PaymentModal = ({ props }: { props: TestProps }) => {
 
   const router = useRouter()
 
-  const socket = io("https://websocket-production-b0ae.up.railway.app/")
+  //const socket = io("https://websocket-production-b0ae.up.railway.app/")
 
-  const joinRoom = (id: string) => {
+  /*const joinRoom = (id: string) => {
     socket.emit("join_room", id)
-  }
+  }*/
 
-  useEffect(() => {
+  /*useEffect(() => {
     socket.on("eventId", response => {
       const simulatePayment = async () => {
         let newPurchaseData = await fetch("/api/purchase-create", {
@@ -62,18 +62,18 @@ const PaymentModal = ({ props }: { props: TestProps }) => {
     })
 
     //setEventId("")
-  }, [])
+  }, [])*/
 
   function removeModal() {
     setErrorProcessing(false)
   }
 
-  const simulatePayment = async () => {
+  const simulatePayment = async (code: string) => {
     let newPurchaseData = await fetch("/api/purchase-create", {
       method: "POST",
       body: JSON.stringify({
         title: theShow.title,
-        mpesaCode: "PKHGA",
+        mpesaCode: code,
         incomingEmail: session?.user?.email
       })
     })
@@ -88,26 +88,77 @@ const PaymentModal = ({ props }: { props: TestProps }) => {
     }, 500)
   }
 
+  function timeout(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }
+
+  /*useEffect(() => {
+    const testTimeout = async () => {
+      await timeout(1000)
+      console.log("log after 1 se")
+      await timeout(500)
+      console.log("log after 1.5 seconds")
+    }
+
+    testTimeout()
+  }, [])*/
+
   const payfunction = async () => {
     setIsProcessing(true)
     const network = isSafaricomChecked ? "safaricom" : "airtel"
-    console.log(safaricomNumber)
 
     //await simulatePayment()
 
     if (network == "safaricom") {
       const payment = await tryOutFetchTransaction({ amount: parseInt(theShow.price), phone: safaricomNumber, videoCode: theShow.videoCode })
 
-      console.log(payment)
-
       if (payment.paymentResData.ResponseCode == "0") {
-        const merchantId = payment.paymentResData.MerchantRequestID
+        const merchantRequestID = payment.paymentResData.MerchantRequestID
 
-        socket.emit("registerPayment", merchantId)
+        await timeout(15000)
+        let paymentReady = await fetch("/api/fetch-single-payment", {
+          method: "POST",
+          body: JSON.stringify({
+            merchantRequestID
+          })
+        })
 
-        joinRoom(merchantId)
+        let paymentDone = await paymentReady.json()
+        if (paymentDone.length) {
+          if (paymentDone[0].resultDesc == "The service request is processed successfully.") {
+            await simulatePayment(paymentDone[0].mpesaCode)
+            setIsProcessing(false)
+            alert("Payment processed successfully. You will be directed to your dashboard")
+            router.push("/dashboard")
+          } else {
+            alert(paymentDone[0].resultDesc)
+            setIsProcessing(false)
+          }
+        } else {
+          await timeout(10000)
+          let paymentReady = await fetch("/api/fetch-single-payment", {
+            method: "POST",
+            body: JSON.stringify({
+              merchantRequestID
+            })
+          })
 
-        console.log(payment)
+          let paymentDone = await paymentReady.json()
+          if (paymentDone.length) {
+            if (paymentDone[0].resultDesc == "The service request is processed successfully.") {
+              await simulatePayment(paymentDone[0].mpesaCode)
+              setIsProcessing(false)
+              alert("Payment processed successfully. You will be directed to your dashboard")
+              router.push("/dashboard")
+            } else {
+              alert(paymentDone[0].resultDesc)
+              setIsProcessing(false)
+            }
+          } else {
+            alert("Sorry we could not process your payment")
+            setIsProcessing(false)
+          }
+        }
       } else {
         alert(payment.paymentResData.CustomerMessage)
         setIsProcessing(false)

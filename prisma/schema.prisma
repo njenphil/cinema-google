@@ -33,6 +33,7 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   //sshows Show[]
+  
   purchases Purchase[]
 }
 
@@ -86,6 +87,17 @@ model SafcomResponse {
   merchantRequestID String
   resultDesc String
   mpesaCode String?
+}
+
+model Payment {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  phoneNumber String?
+  merchantRequestID String
+  resultDesc String
+  mpesaCode String?
+  amount String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Show {

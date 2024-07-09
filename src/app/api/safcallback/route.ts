@@ -3,21 +3,36 @@ import { NextResponse } from "next/server"
 import { emitResponseEvent } from "@/lib/emitResponseEvent"
 
 export async function POST(req: Request) {
-  console.log("STK PUSH CALLBACK")
+  //console.log("STK PUSH CALLBACK")
   const body = await req.json()
   const safResponse = body
 
-  console.log("testing: ", safResponse)
+  //console.log("testing: ", safResponse)
 
   const merchantRequestID = safResponse.Body.stkCallback.MerchantRequestID
   const resultDesc = safResponse.Body.stkCallback.ResultDesc
 
   const mpesaReceiptNumber = safResponse.Body.stkCallback.CallbackMetadata?.Item[1].Value || ""
+  const amount = safResponse.Body.stkCallback.CallbackMetadata?.Item[0].Value || ""
+  const phoneNumber = safResponse.Body.stkCallback.CallbackMetadata?.Item[4].Value || ""
 
   try {
     await prisma.safcomResponse.create({ data: { merchantRequestID, resultDesc, mpesaCode: mpesaReceiptNumber } })
-    emitResponseEvent(merchantRequestID, resultDesc, mpesaReceiptNumber)
   } catch (error) {}
+
+  try {
+    await prisma.payment.create({
+      data: {
+        merchantRequestID,
+        resultDesc,
+        amount: amount.toString(),
+        phoneNumber: phoneNumber.toString(),
+        mpesaCode: mpesaReceiptNumber
+      }
+    })
+  } catch (error) {
+    //console.log(error)
+  }
 
   return NextResponse.json({ data: safResponse }, { status: 201 })
   /*const merchantRequestID = req?.body?.Body?.stkCallback.MerchantRequestID

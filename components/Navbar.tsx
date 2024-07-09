@@ -11,7 +11,7 @@ export const Navbar = () => {
       <header>
         <div className="header-wrapper | container">
           <div className="cinema-logo">
-            <Image src="/logo.svg" width={224} height={53} alt="cinema logo" />
+            <Image src="/logo2.png" width={124} height={53} alt="cinema logo" />
           </div>
           <nav>
             <div className="home">

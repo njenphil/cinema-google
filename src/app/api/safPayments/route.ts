@@ -34,13 +34,13 @@ export async function POST(req: Request) {
       method: "POST",
       headers,
       body: JSON.stringify({
-        BusinessShortCode: 174379, // Store Number
+        BusinessShortCode: 5641457, // Store Number
         Password: Password,
         Timestamp: Timestamp,
         TransactionType: "CustomerPayBillOnline", //"CustomerBuyGoodsOnline"
         Amount: 1,
         PartyA: 254708374149,
-        PartyB: 174379, //  Till Number
+        PartyB: 7609299, //  Till Number
         PhoneNumber: `254${PhoneNumber}`,
         CallBackURL: callBackURL,
         AccountReference: AccountReference,

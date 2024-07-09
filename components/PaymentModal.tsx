@@ -112,6 +112,7 @@ const PaymentModal = ({ props }: { props: TestProps }) => {
     if (network == "safaricom") {
       const payment = await tryOutFetchTransaction({ amount: parseInt(theShow.price), phone: safaricomNumber, videoCode: theShow.videoCode })
 
+      console.log(payment)
       if (payment.paymentResData.ResponseCode == "0") {
         const merchantRequestID = payment.paymentResData.MerchantRequestID
 

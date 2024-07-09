@@ -8,7 +8,7 @@ const ShowcaseSlider = () => {
         <i className="fas fa-angle-left left-arrow is-hidden" aria-hidden="true"></i>
         <i className="fas fa-angle-right right-arrow" aria-hidden="true"></i>
         <section className="showcase">
-          <div className="showcase-slide active-thumbnail" style={{ backgroundImage: `linear-gradient(to right, hsla(0, 0%, 0%, 1), hsla(0, 0%, 0%, 0.5)), url(/showcase-background.webp)` }}>
+          <div className="showcase-slide active-thumbnail" style={{ backgroundImage: `linear-gradient(to bottom, hsla(0, 0%, 0%, 1), hsla(0, 0%, 0%, 0.3)), url(/showcase-background-new.webp)` }}>
             <div className="showcase-body-wrapper | container">
               <div className="showcase-body-content">
                 <div className="ad-tag">NEW RELEASE</div>

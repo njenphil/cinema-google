@@ -12,13 +12,6 @@ const nextConfig = {
             key: "Cache-Control",
             value: "no-store, max-age=0"
           }
-        ],
-        source: "/api/category/*",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "no-store, max-age=0"
-          }
         ]
       }
     ]

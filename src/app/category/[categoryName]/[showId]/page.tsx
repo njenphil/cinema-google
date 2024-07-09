@@ -17,6 +17,8 @@ const defaultParams = {
   showId: "teenage_fantasy"
 }
 
+export const dynamic = "force-dynamic"
+
 const SingleShowPage = async ({ params = defaultParams }: { params: TSingleShow }) => {
   const showId = params?.showId
 

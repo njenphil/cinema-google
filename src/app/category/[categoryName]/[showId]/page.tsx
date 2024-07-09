@@ -17,7 +17,7 @@ const defaultParams = {
   showId: "teenage_fantasy"
 }
 
-export const dynamic = "force-dynamic"
+export const dynamic = "force-dynamic" // to facilitate loading from non cache
 
 const SingleShowPage = async ({ params = defaultParams }: { params: TSingleShow }) => {
   const showId = params?.showId

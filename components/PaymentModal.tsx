@@ -28,7 +28,7 @@ const PaymentModal = ({ props }: { props: TestProps }) => {
 
   const router = useRouter()
 
-  const [socket, setSocket] = useState(io("http://localhost:5000"))
+  const socket = io("https://websocket-production-b0ae.up.railway.app")
 
   const joinRoom = (id: string) => {
     socket.emit("join_room", id)

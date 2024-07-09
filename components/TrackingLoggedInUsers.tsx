@@ -4,7 +4,7 @@ import { io } from "socket.io-client"
 import { useSession, signOut } from "next-auth/react"
 
 const TrackingLoggedInUsers = () => {
-  /*const { data: session, status } = useSession()
+  const { data: session, status } = useSession()
   const loggedInUsersSocket = io("https://websocket-production-b0ae.up.railway.app/logged-in-users")
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const TrackingLoggedInUsers = () => {
 
   loggedInUsersSocket.on("logout", data => {
     signOut()
-  })*/
+  })
 
   return <div style={{ display: "none" }}>TrackingLoggedInUsers</div>
 }

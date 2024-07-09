@@ -28,13 +28,13 @@ const PaymentModal = ({ props }: { props: TestProps }) => {
 
   const router = useRouter()
 
-  /*const [socket, setSocket] = useState(io("http://localhost:5000"))
+  const [socket, setSocket] = useState(io("http://localhost:5000"))
 
   const joinRoom = (id: string) => {
     socket.emit("join_room", id)
-  }*/
+  }
 
-  /*useEffect(() => {
+  useEffect(() => {
     socket.on("eventId", response => {
       const simulatePayment = async () => {
         let newPurchaseData = await fetch("/api/purchase-create", {
@@ -62,7 +62,7 @@ const PaymentModal = ({ props }: { props: TestProps }) => {
     })
 
     //setEventId("")
-  }, [])*/
+  }, [])
 
   function removeModal() {
     setErrorProcessing(false)
@@ -93,9 +93,9 @@ const PaymentModal = ({ props }: { props: TestProps }) => {
     const network = isSafaricomChecked ? "safaricom" : "airtel"
     console.log(safaricomNumber)
 
-    await simulatePayment()
+    //await simulatePayment()
 
-    /*if (network == "safaricom") {
+    if (network == "safaricom") {
       const payment = await tryOutFetchTransaction({ amount: parseInt(theShow.price), phone: safaricomNumber, videoCode: theShow.videoCode })
 
       console.log(payment)
@@ -112,7 +112,7 @@ const PaymentModal = ({ props }: { props: TestProps }) => {
         alert(payment.paymentResData.CustomerMessage)
         setIsProcessing(false)
       }
-    }*/
+    }
   }
 
   const selectedLine = (event: React.ChangeEvent<HTMLInputElement>): void => {

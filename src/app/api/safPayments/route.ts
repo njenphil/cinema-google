@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import { generateSafcomAccessToken } from "@/safcomAccessToken"
 
 const processRequestUrl = `https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest?`
-const callBackURL = `https://cold-comics-sin.loca.lt/api/safcallback`
+const callBackURL = `https://cinema-google.vercel.app//api/safcallback`
 //console.log(callBackURL)
 const passkey = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919"
 const BusinessShortCode = "174379"

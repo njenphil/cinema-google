@@ -1,4 +1,5 @@
 import React from "react"
+import { cookies } from "next/headers"
 
 import "../../../../../lib/css/single-show.css"
 import SingleShowShowcase from "@/components/SingleShowShowcase"
@@ -20,6 +21,7 @@ const defaultParams = {
 export const dynamic = "force-dynamic" // to facilitate loading from non cache
 
 const SingleShowPage = async ({ params = defaultParams }: { params: TSingleShow }) => {
+  cookies()
   const showId = params?.showId
 
   const theShow = await fetch(`${process.env.HOME_URL}api/fetch-shows-url`, {

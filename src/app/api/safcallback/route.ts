@@ -16,6 +16,8 @@ export async function POST(req: Request) {
   const amount = safResponse.Body.stkCallback.CallbackMetadata?.Item[0].Value || ""
   const phoneNumber = safResponse.Body.stkCallback.CallbackMetadata?.Item[4].Value || ""
 
+  // save all the fields from safcom
+
   try {
     await prisma.safcomResponse.create({ data: { merchantRequestID, resultDesc, mpesaCode: mpesaReceiptNumber } })
   } catch (error) {}

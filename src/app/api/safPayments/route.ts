@@ -11,7 +11,7 @@ const Timestamp = date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) +
 
 const Password = new (Buffer.from as any)(`${BusinessShortCode}${passkey}${Timestamp}`).toString("base64")
 
-const PartyB = "174379"
+//const PartyB = "174379"
 
 type CorrectType = {
   message: String

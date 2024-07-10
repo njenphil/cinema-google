@@ -70,12 +70,12 @@ const EditShowForm = ({ props }: { props: PType }) => {
 
   const saveToDatabase = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (!thumbnailUrl) {
+    /*if (!thumbnailUrl) {
       alert("You must upload show thumbnail")
       return
     }
 
-    await uploadImage()
+    await uploadImage()*/
 
     const updatedShowData = await fetch("/api/edit-show", {
       method: "PUT",
@@ -86,7 +86,7 @@ const EditShowForm = ({ props }: { props: PType }) => {
         restriction: showRestriction,
         id: props.showToEdit.id,
         release: showRestriction,
-        thumbnail: `/${thumbnailUrl.name}`,
+        //thumbnail: `/${thumbnailUrl.name}`,
         videoCode: showCode,
         price: videoPrice,
         urlTitle: showUrl,
@@ -135,10 +135,10 @@ const EditShowForm = ({ props }: { props: PType }) => {
                     <label>Enter the show release date</label>
                     <input type="text" id="showRelease" placeholder="Enter show release e.g. Feb 2024" onChange={e => setShowRelese(e.target.value)} value={showRelease} />
                   </div>
-                  <div className="form-control">
+                  {/*<div className="form-control">
                     <label>Upload show thumbnail</label>
                     <input type="file" name="show-thumbnail" onChange={e => setThumbnailUrl(e.target.files?.[0])} />
-                  </div>
+                  </div>*/}
 
                   <div className="form-control">
                     <label>Enter video code</label>
@@ -148,12 +148,12 @@ const EditShowForm = ({ props }: { props: PType }) => {
                     <label>Enter video price</label>
                     <input type="text" id="videoPrice" placeholder="Enter video price e.g. 60" onChange={e => setVideoPrice(e.target.value)} value={videoPrice} />
                   </div>
-                </div>
-                <div>
                   <div className="form-control">
                     <label>Enter the trailer link</label>
                     <input type="text" id="trailerLink" placeholder="Enter the trailer link" onChange={e => setTrailerLink(e.target.value)} value={trailerLink} />
                   </div>
+                </div>
+                <div>
                   <div className="form-control">
                     <label>Enter the main video link</label>
                     <input type="text" id="mainVideoLink" placeholder="Enter the main video link" onChange={e => setMainVideoLink(e.target.value)} value={mainVideoLink} />
